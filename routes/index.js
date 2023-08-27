@@ -1,9 +1,9 @@
 const router = require("express").Router();
 
 router.get("/", (req, res) => {
-  resolve.send("Hello get World");
+  res.send("Hello get World");
 });
-
+/*
 router.post("/", (req, res) => {
   res.send("Hello post World");
 });
@@ -14,5 +14,6 @@ app.get("/:name", (req, res) => {
   const { name, roll } = req.params;
   res.send(`Hello ${name}. You are from ${address} & your roll is ${roll}`);
 });
+*/
 
 module.exports = router;
