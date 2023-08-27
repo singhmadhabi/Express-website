@@ -1,7 +1,11 @@
 const router = require("express").Router();
 
 router.get("/", (req, res) => {
-  res.send("welcome To Broadway");
+  resolve.send("Hello get World");
+});
+
+router.post("/", (req, res) => {
+  res.send("Hello post World");
 });
 
 app.get("/:name", (req, res) => {
