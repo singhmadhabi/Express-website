@@ -1,18 +1,17 @@
 const router = require("express").Router();
 
-router.get("/", (req, res) => {
+router.get("/", (req, resolve) => {
   resolve.send("Hello get World");
 });
-/*
+
 router.post("/", (req, res) => {
+  console.log(req.body);
   res.send("Hello post World");
 });
 
-*/
-router.get("/:name/:roll", (req, res) => {
-  console.log(req.query);
+router.get("/:name", (req, res) => {
   const { address } = req.query;
-  const { name, roll } = req.params;
+  const { name } = req.params;
   res.send(`Hello ${name}. You are from ${address} & your roll is ${roll}`);
 });
 
